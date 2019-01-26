@@ -20,6 +20,18 @@
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
       }
     },
+     "addressPrefix": {
+      "type": "string",
+      "metadata": {
+        "description": "address prefix."
+      }
+    },
+     "subnetPrefix": {
+      "type": "string",
+      "metadata": {
+        "description": "subnet prefix."
+      }
+    },
     "windowsOSVersion": {
       "type": "string",
       "defaultValue": "2016-Datacenter",
@@ -46,9 +58,7 @@
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
     "nicName": "myVMNic",
-    "addressPrefix": "[parameters('addressPrefix')"],
     "subnetName": "Subnet",
-    "subnetPrefix": "[parameters('subnetPrefix')"],
     "publicIPAddressName": "myPublicIP",
     "vmName": "SimpleWinVM",
     "virtualNetworkName": "MyVNET",
@@ -86,14 +96,14 @@
       "properties": {
         "addressSpace": {
           "addressPrefixes": [
-            "[variables('addressPrefix')]"
+            "[parameters('addressPrefix')]"
           ]
         },
         "subnets": [
           {
             "name": "[variables('subnetName')]",
             "properties": {
-              "addressPrefix": "[variables('subnetPrefix')]"
+              "addressPrefix": "[parameters('subnetPrefix')]"
             }
           }
         ]
