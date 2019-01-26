@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "adminUsername": {
-      "value": "GEN-USER"
+      "value": "wowazure"
     },
     "adminPassword": {
-      "value": "GEN-PASSWORD"
+      "value": "Wowazureabcd12345#"
     },
     "dnsLabelPrefix": {
-      "value": "GEN-UNIQUE"
+      "value": "wowazuredns"
     }
   }
 }
