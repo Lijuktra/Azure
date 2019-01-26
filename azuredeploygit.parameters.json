@@ -9,7 +9,7 @@
       "value": "Wowazureabcd12345#"
     },
     "dnsLabelPrefix": {
-      "value": "wowazuredns2"
+      "value": "wowazuredns3"
     },
 	"addressPrefix": {
       "value": "10.0.0.0/16"
