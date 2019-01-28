@@ -38,6 +38,14 @@
         "description": "HostName."
       }
     },
+    
+      "virtualNetworkName": {
+      "type": "string",
+      "metadata": {
+        "description": "virtualnetworkName."
+      }
+    },
+        
           
     "windowsOSVersion": {
       "type": "string",
