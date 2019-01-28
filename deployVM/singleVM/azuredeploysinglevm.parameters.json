@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "wowazure"
+    },
+    "adminPassword": {
+      "value": "Wowazureabcd12345#"
+    },
+    "VMhostName": {
+      "value": "swnclr000821.dcloud.local"
+    },
+    "dnsLabelPrefix": {
+      "value": "dclouddns3"
+    },
+    "virtualNetworkName": {
+      "value": "DCloudVnet"
+    },    
+	"addressPrefix": {
+      "value": "10.0.0.0/16"
+    },
+	"subnetPrefix": {
+      "value": "10.0.0.0/24"
+    }
+  }
+}
