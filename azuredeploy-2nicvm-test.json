@@ -42,8 +42,10 @@
   },
   "variables": {
     "virtualMachineName": "VM-MultiNic",
+	"virtualMachineName2": "VM-Orange",
     "nic1": "nic-1",
     "nic2": "nic-2",
+	"nic3": "nic-3",
     "virtualNetworkName": "DCLOUDvirtualNetwork",
     "subnet1Name": "subnet-1",
     "subnet2Name": "subnet-2",
@@ -107,6 +109,51 @@
               "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('nic2'))]"
             }
           ]
+        },
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+            "enabled": true,
+            "storageUri": "[reference(resourceId('Microsoft.Storage/storageAccounts', variables('diagStorageAccountName')), '2017-06-01').primaryEndpoints['blob']]"
+          }
+        }
+      }
+    },
+	{
+      "name": "[variables('virtualMachineName2')]",
+      "type": "Microsoft.Compute/virtualMachines",
+      "apiVersion": "2017-03-30",
+      "location": "[parameters('location')]",
+      "comments": "This is the virtual machine that you're building.",
+      "properties": {
+        "osProfile": {
+          "computerName": "[variables('virtualMachineName2')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "adminPassword": "[parameters('adminPassword')]",
+          "windowsConfiguration": {
+            "provisionVmAgent": "true"
+          }
+        },
+        "hardwareProfile": {
+          "vmSize": "[parameters('virtualMachineSize')]"
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2016-Datacenter",
+            "version": "latest"
+          },
+          "osDisk": {
+            "createOption": "FromImage"
+          },
+          "dataDisks": []
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+             "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('nic3'))]"
+            },
+           ]
         },
         "diagnosticsProfile": {
           "bootDiagnostics": {
