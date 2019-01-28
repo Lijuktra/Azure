@@ -12,7 +12,10 @@
       "value": "swnclr000822"
     },
     "dnsLabelPrefix": {
-      "value": "dclouddns5"
+      "value": "dclouddns6"
+    },
+    "publicIP": {
+      "value": "publicip3"
     },
     "virtualNetworkName": {
       "value": "DCloudVnet"
@@ -21,10 +24,10 @@
       "value": "10.0.0.0/16"
     },
 	"subnetPrefix": {
-      "value": "10.0.0.0/24"
+      "value": "10.0.1.0/24"
     },
     "PrimaryNic": {
-      "value": "Nic3"
+      "value": "Nic4"
     }
   }
 }
