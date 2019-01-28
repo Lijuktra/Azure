@@ -101,7 +101,7 @@
       "properties": {
         "ipConfigurations": [
           {
-            "name": "ipconfig1",
+            "name": "ipconfig3",
             "properties": {
               "privateIPAllocationMethod": "Dynamic",
               "subnet": {
