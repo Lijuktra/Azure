@@ -22,6 +22,9 @@
     },
 	"subnetPrefix": {
       "value": "10.0.0.0/24"
+    },
+    "PrimaryNic": {
+      "value": "Nic3"
     }
   }
 }
