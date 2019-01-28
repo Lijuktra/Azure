@@ -80,9 +80,6 @@
       "name": "[variables('nicName')]",
       "location": "[parameters('location')]",
       "apiVersion": "2018-10-01",
-      "dependsOn": [
-        "[resourceId('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
-      ],
       "properties": {
         "ipConfigurations": [
           {
