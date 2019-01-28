@@ -20,10 +20,16 @@
         "description": "address prefix."
       }
     },
-     "subnetPrefix": {
+    "subnetPrefix": {
       "type": "string",
       "metadata": {
         "description": "subnet prefix."
+      }
+    },
+     "subnetName": {
+      "type": "string",
+      "metadata": {
+        "description": "subnet name."
       }
     },
     "VMhostName": {
@@ -69,8 +75,7 @@
   },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
-    "subnetName": "Subnet",
-    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), variables('subnetName'))]"
+    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('subnetName'))]"
   },
   "resources": [
     {
@@ -97,7 +102,7 @@
         },
         "subnets": [
           {
-            "name": "[variables('subnetName')]",
+            "name": "[parameters('subnetName')]",
             "properties": {
               "addressPrefix": "[parameters('subnetPrefix')]"
             }
@@ -180,5 +185,5 @@
     }
   ],
   "outputs": {
-    }
+      }
 }
