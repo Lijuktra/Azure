@@ -41,11 +41,13 @@
     }
   },
   "variables": {
-    "virtualMachineName": "VM-MultiNic",
+    "virtualMachineName1": "VM-MultiNicRed",
 	"virtualMachineName2": "VM-Orange",
+	"virtualMachineName3": "VM-Green",
     "nic1": "nic-1",
     "nic2": "nic-2",
 	"nic3": "nic-3",
+	"nic4": "nic-4",
     "virtualNetworkName": "DCLOUDvirtualNetwork",
     "subnet1Name": "subnet-1",
     "subnet2Name": "subnet-2",
@@ -56,12 +58,13 @@
     "subnet1Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnet1Name'))]",
     "subnet2Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnet2Name'))]",
 	"subnet3Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnet3Name'))]",
+	"subnet4Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnet4Name'))]",
     "diagStorageAccountName": "[concat('diags',uniqueString(resourceGroup().id))]",
     "networkSecurityGroupName": "NSG"
   },
   "resources": [
     {
-      "name": "[variables('virtualMachineName')]",
+      "name": "[variables('virtualMachineName1')]",
       "type": "Microsoft.Compute/virtualMachines",
       "apiVersion": "2017-03-30",
       "location": "[parameters('location')]",
@@ -73,7 +76,7 @@
       ],
       "properties": {
         "osProfile": {
-          "computerName": "[variables('virtualMachineName')]",
+          "computerName": "[variables('virtualMachineName1')]",
           "adminUsername": "[parameters('adminUsername')]",
           "adminPassword": "[parameters('adminPassword')]",
           "windowsConfiguration": {
@@ -153,6 +156,51 @@
           "networkInterfaces": [
             {
              "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('nic3'))]"
+            },
+           ]
+        },
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+            "enabled": true,
+            "storageUri": "[reference(resourceId('Microsoft.Storage/storageAccounts', variables('diagStorageAccountName')), '2017-06-01').primaryEndpoints['blob']]"
+          }
+        }
+      }
+    },
+	{
+      "name": "[variables('virtualMachineName3')]",
+      "type": "Microsoft.Compute/virtualMachines",
+      "apiVersion": "2017-03-30",
+      "location": "[parameters('location')]",
+      "comments": "This is the virtual machine that you're building.",
+      "properties": {
+        "osProfile": {
+          "computerName": "[variables('virtualMachineName3')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "adminPassword": "[parameters('adminPassword')]",
+          "windowsConfiguration": {
+            "provisionVmAgent": "true"
+          }
+        },
+        "hardwareProfile": {
+          "vmSize": "[parameters('virtualMachineSize')]"
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2016-Datacenter",
+            "version": "latest"
+          },
+          "osDisk": {
+            "createOption": "FromImage"
+          },
+          "dataDisks": []
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+             "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('nic4'))]"
             },
            ]
         },
@@ -286,6 +334,29 @@
             "properties": {
               "subnet": {
                 "id": "[variables('subnet3Ref')]"
+              },
+              "privateIPAllocationMethod": "Dynamic"
+            }
+          }
+        ]
+      }
+    },
+	{
+      "name": "[variables('nic4')]",
+      "type": "Microsoft.Network/networkInterfaces",
+      "apiVersion": "2017-06-01",
+      "location": "[parameters('location')]",
+      "comments": "This will be your new NIC for vm3",
+      "dependsOn": [
+        "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
+      ],
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipconfig2",
+            "properties": {
+              "subnet": {
+                "id": "[variables('subnet4Ref')]"
               },
               "privateIPAllocationMethod": "Dynamic"
             }
