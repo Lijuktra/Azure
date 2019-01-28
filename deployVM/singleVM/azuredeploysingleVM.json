@@ -38,8 +38,7 @@
         "description": "HostName."
       }
     },
-    
-      "virtualNetworkName": {
+    "virtualNetworkName": {
       "type": "string",
       "metadata": {
         "description": "virtualnetworkName."
