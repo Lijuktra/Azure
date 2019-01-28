@@ -9,10 +9,10 @@
       "value": "Wowazureabcd12345#"
     },
     "VMhostName": {
-      "value": "swnclr000821"
+      "value": "swnclr000822"
     },
     "dnsLabelPrefix": {
-      "value": "dclouddns4"
+      "value": "dclouddns5"
     },
     "virtualNetworkName": {
       "value": "DCloudVnet"
