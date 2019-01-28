@@ -67,9 +67,7 @@
     "nicName": "dcloudVMNic2",
     "subnetName": "Subnet",
     "publicIPAddressName": "myPublicIP2",
-    "vmName": "[parameters('VMhostName')]",
-    "virtualNetworkName": "[parameters('virtualNetworkName')]",
-    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
+    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), variables('subnetName'))]"
   },
   "resources": [
     {
@@ -97,7 +95,7 @@
     },
     {
       "type": "Microsoft.Network/virtualNetworks",
-      "name": "[variables('virtualNetworkName')]",
+      "name": "[parameters('virtualNetworkName')]",
       "location": "[parameters('location')]",
       "apiVersion": "2018-10-01",
       "properties": {
@@ -123,7 +121,7 @@
       "apiVersion": "2018-10-01",
       "dependsOn": [
         "[resourceId('Microsoft.Network/publicIPAddresses/', variables('publicIPAddressName'))]",
-        "[resourceId('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
+        "[resourceId('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName')]"
       ],
       "properties": {
         "ipConfigurations": [
@@ -144,7 +142,7 @@
     },
     {
       "type": "Microsoft.Compute/virtualMachines",
-      "name": "[variables('vmName')]",
+      "name": "[parameters('VMhostName')]",
       "location": "[parameters('location')]",
       "apiVersion": "2018-10-01",
       "dependsOn": [
@@ -156,7 +154,7 @@
           "vmSize": "Standard_A2"
         },
         "osProfile": {
-          "computerName": "[variables('vmName')]",
+          "computerName": "[parameters('VMhostName')]",
           "adminUsername": "[parameters('adminUsername')]",
           "adminPassword": "[parameters('adminPassword')]"
         },
