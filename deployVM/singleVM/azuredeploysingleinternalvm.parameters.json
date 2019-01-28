@@ -9,7 +9,7 @@
       "value": "Wowazureabcd12345#"
     },
     "VMhostName": {
-      "value": "swnclr000824"
+      "value": "swnclr000825"
     },
     "virtualNetworkName": {
       "value": "DCloudVnet"
@@ -24,7 +24,7 @@
       "value": "10.0.0.0/24"
     },
     "PrimaryNic": {
-      "value": "Nic8"
+      "value": "Nic9"
     }
   }
 }
