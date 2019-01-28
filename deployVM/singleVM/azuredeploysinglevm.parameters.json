@@ -12,10 +12,10 @@
       "value": "swnclr000823"
     },
     "dnsLabelPrefix": {
-      "value": "dclouddns6"
+      "value": "dclouddns7"
     },
     "publicIP": {
-      "value": "publicip6"
+      "value": "dcpublicip7"
     },
     "virtualNetworkName": {
       "value": "DCloudVnet"
