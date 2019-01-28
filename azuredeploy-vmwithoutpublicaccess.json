@@ -54,7 +54,7 @@
     "nicName": "myVMNic2",
     "subnetName": "Subnet",
     "vmName": "SimpleWinVM2",
-    "virtualNetworkName": "MyVNET",
+    "virtualNetworkName": "DCLOUDvirtualNetwork",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
   },
   "resources": [
