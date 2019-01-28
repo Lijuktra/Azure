@@ -44,8 +44,6 @@
         "description": "virtualnetworkName."
       }
     },
-        
-          
     "windowsOSVersion": {
       "type": "string",
       "defaultValue": "2016-Datacenter",
