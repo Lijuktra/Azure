@@ -52,7 +52,7 @@
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
     "nicName": "myVMNic2",
-    "subnetName": "Subnet",
+    "subnetName": "Subnet-3",
     "vmName": "SimpleWinVM2",
     "virtualNetworkName": "DCLOUDvirtualNetwork",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
