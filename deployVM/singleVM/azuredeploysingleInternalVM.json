@@ -14,19 +14,7 @@
         "description": "Password for the Virtual Machine."
       }
     },
-    "dnsLabelPrefix": {
-      "type": "string",
-      "metadata": {
-        "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
-      }
-    },
-    "publicIP": {
-      "type": "string",
-      "metadata": {
-        "description": "Unique public ip."
-      }
-    },
-     "addressPrefix": {
+    "addressPrefix": {
       "type": "string",
       "metadata": {
         "description": "address prefix."
@@ -97,18 +85,6 @@
       "properties": {}
     },
     {
-      "type": "Microsoft.Network/publicIPAddresses",
-      "name": "[parameters('publicIP')]",
-      "location": "[parameters('location')]",
-      "apiVersion": "2018-10-01",
-      "properties": {
-        "publicIPAllocationMethod": "Dynamic",
-        "dnsSettings": {
-          "domainNameLabel": "[parameters('dnsLabelPrefix')]"
-        }
-      }
-    },
-    {
       "type": "Microsoft.Network/virtualNetworks",
       "name": "[parameters('virtualNetworkName')]",
       "location": "[parameters('location')]",
@@ -135,7 +111,6 @@
       "location": "[parameters('location')]",
       "apiVersion": "2018-10-01",
       "dependsOn": [
-        "[resourceId('Microsoft.Network/publicIPAddresses/', parameters('publicIP'))]",
         "[resourceId('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]"
       ],
       "properties": {
@@ -144,9 +119,6 @@
             "name": "ipconfig1",
             "properties": {
               "privateIPAllocationMethod": "Dynamic",
-              "publicIPAddress": {
-                "id": "[resourceId('Microsoft.Network/publicIPAddresses',parameters('publicIP'))]"
-              },
               "subnet": {
                 "id": "[variables('subnetRef')]"
               }
@@ -208,9 +180,5 @@
     }
   ],
   "outputs": {
-    "hostname": {
-      "type": "string",
-      "value": "[reference(parameters('publicIP')).dnsSettings.fqdn]"
     }
-  }
 }
