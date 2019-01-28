@@ -55,6 +55,7 @@
     "publicIPAddressName": "publicIp",
     "subnet1Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnet1Name'))]",
     "subnet2Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnet2Name'))]",
+	"subnet3Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnet3Name'))]",
     "diagStorageAccountName": "[concat('diags',uniqueString(resourceGroup().id))]",
     "networkSecurityGroupName": "NSG"
   },
@@ -262,6 +263,29 @@
             "properties": {
               "subnet": {
                 "id": "[variables('subnet2Ref')]"
+              },
+              "privateIPAllocationMethod": "Dynamic"
+            }
+          }
+        ]
+      }
+    },
+	{
+      "name": "[variables('nic3')]",
+      "type": "Microsoft.Network/networkInterfaces",
+      "apiVersion": "2017-06-01",
+      "location": "[parameters('location')]",
+      "comments": "This will be your new NIC for vm2",
+      "dependsOn": [
+        "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
+      ],
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipconfig2",
+            "properties": {
+              "subnet": {
+                "id": "[variables('subnet3Ref')]"
               },
               "privateIPAllocationMethod": "Dynamic"
             }
