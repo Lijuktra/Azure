@@ -70,6 +70,12 @@
       "properties": {}
     },
     {
+      "type": "Microsoft.Network/virtualNetworks",
+      "name": "[variables('virtualNetworkName')]",
+      "location": "[parameters('location')]",
+      "apiVersion": "2018-10-01",
+     },
+    {
       "type": "Microsoft.Network/networkInterfaces",
       "name": "[variables('nicName')]",
       "location": "[parameters('location')]",
@@ -80,7 +86,7 @@
       "properties": {
         "ipConfigurations": [
           {
-            "name": "ipconfig3",
+            "name": "ipconfig1",
             "properties": {
               "privateIPAllocationMethod": "Dynamic",
               "subnet": {
