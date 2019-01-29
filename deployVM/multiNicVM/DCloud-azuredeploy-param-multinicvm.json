@@ -36,10 +36,10 @@
       "value": "10.0.1.0/24"
     },
      "PrimaryNic": {
-      "value": "Nic1"
+      "value": "FrontNic1"
     },
     "SecondaryNic": {
-      "value": "Nic2"
+      "value": "MgmntNic2"
     }
     
   }
