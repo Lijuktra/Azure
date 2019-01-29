@@ -1,6 +1,6 @@
 Public VM
 -------------------------------
-New-AzureRmResourceGroup -Name "wowDCLOUDResourceGroup" -Location "West US"
+New-AzureRmResourceGroup -Name "wowDCLOUDResourceGroup" -Location "West Europe"
 
 $templatePath = "https://raw.githubusercontent.com/Lijuktra/Azure/master/deployVM/singleVM/azuredeploysinglePublicVM.json"
 $parametersPath = "https://raw.githubusercontent.com/Lijuktra/Azure/master/deployVM/singleVM/azuredeploysinglepublicvm.parameters.json"
@@ -11,4 +11,4 @@ Internal VM
 
 $templatePath = "https://raw.githubusercontent.com/Lijuktra/Azure/master/deployVM/singleVM/azuredeploysingleInternalVM.json"
 $parametersPath = "https://raw.githubusercontent.com/Lijuktra/Azure/master/deployVM/singleVM/azuredeploysingleinternalvm.parameters.json"
-New-AzureRmResourceGroupDeployment -ResourceGroupName "wowDCLOUDResourceGroup" -Name "wowDeployment" -TemplateUri $templatePath -TemplateParameterUri $parametersPath
+New-AzureRmResourceGroupD$templatePatheployment -ResourceGroupName "wowDCLOUDResourceGroup" -Name "wowDeployment" -TemplateUri $templatePath -TemplateParameterUri $parametersPath
