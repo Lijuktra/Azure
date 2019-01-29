@@ -72,7 +72,7 @@
       "dependsOn": [
         "[variables('nic1')]",
         "[variables('nic2')]",
-        "[variables('diagStorageAccountName')]"
+        "[variables('diagStorageAccountName')]",
       ],
       "properties": {
         "osProfile": {
@@ -130,7 +130,6 @@
       "comments": "This is the virtual machine that you're building.",
        "dependsOn": [
         "[variables('nic3)]",
-        "[variables('diagStorageAccountName')]"
       ],
       "properties": {
         "osProfile": {
@@ -179,7 +178,6 @@
       "comments": "This is the virtual machine that you're building.",
        "dependsOn": [
        "[variables('nic4)]",
-        "[variables('diagStorageAccountName')]"
       ],
       "properties": {
         "osProfile": {
