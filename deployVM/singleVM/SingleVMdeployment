@@ -11,4 +11,4 @@ Internal VM
 
 $templatePath = "https://raw.githubusercontent.com/Lijuktra/Azure/master/deployVM/singleVM/azuredeploysingleInternalVM.json"
 $parametersPath = "https://raw.githubusercontent.com/Lijuktra/Azure/master/deployVM/singleVM/azuredeploysingleinternalvm.parameters.json"
-New-AzureRmResourceGroupD$templatePatheployment -ResourceGroupName "wowDCLOUDResourceGroup" -Name "wowDeployment" -TemplateUri $templatePath -TemplateParameterUri $parametersPath
+New-AzureRmResourceGroupDeployment -ResourceGroupName "wowDCLOUDResourceGroup" -Name "wowDeployment" -TemplateUri $templatePath -TemplateParameterUri $parametersPath
