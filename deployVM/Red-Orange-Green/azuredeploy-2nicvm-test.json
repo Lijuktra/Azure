@@ -72,6 +72,8 @@
       "dependsOn": [
         "[variables('nic1')]",
         "[variables('nic2')]",
+        "[variables('nic3)]",
+        "[variables('nic4)]",
         "[variables('diagStorageAccountName')]"
       ],
       "properties": {
@@ -128,6 +130,11 @@
       "apiVersion": "2017-03-30",
       "location": "[parameters('location')]",
       "comments": "This is the virtual machine that you're building.",
+       "dependsOn": [
+        "[variables('nic3)]",
+        "[variables('nic4)]",
+        "[variables('diagStorageAccountName')]"
+      ],
       "properties": {
         "osProfile": {
           "computerName": "[variables('virtualMachineName2')]",
@@ -173,6 +180,11 @@
       "apiVersion": "2017-03-30",
       "location": "[parameters('location')]",
       "comments": "This is the virtual machine that you're building.",
+       "dependsOn": [
+        "[variables('nic3)]",
+        "[variables('nic4)]",
+        "[variables('diagStorageAccountName')]"
+      ],
       "properties": {
         "osProfile": {
           "computerName": "[variables('virtualMachineName3')]",
