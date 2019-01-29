@@ -129,7 +129,7 @@
       "location": "[parameters('location')]",
       "comments": "This is the virtual machine that you're building.",
        "dependsOn": [
-        "[variables('nic3)]",
+        "[variables('nic3')]",
       ],
       "properties": {
         "osProfile": {
@@ -177,7 +177,7 @@
       "location": "[parameters('location')]",
       "comments": "This is the virtual machine that you're building.",
        "dependsOn": [
-       "[variables('nic4)]",
+       "[variables('nic4')]",
       ],
       "properties": {
         "osProfile": {
