@@ -72,8 +72,6 @@
       "dependsOn": [
         "[variables('nic1')]",
         "[variables('nic2')]",
-        "[variables('nic3)]",
-        "[variables('nic4)]",
         "[variables('diagStorageAccountName')]"
       ],
       "properties": {
@@ -132,7 +130,6 @@
       "comments": "This is the virtual machine that you're building.",
        "dependsOn": [
         "[variables('nic3)]",
-        "[variables('nic4)]",
         "[variables('diagStorageAccountName')]"
       ],
       "properties": {
@@ -181,8 +178,7 @@
       "location": "[parameters('location')]",
       "comments": "This is the virtual machine that you're building.",
        "dependsOn": [
-        "[variables('nic3)]",
-        "[variables('nic4)]",
+       "[variables('nic4)]",
         "[variables('diagStorageAccountName')]"
       ],
       "properties": {
