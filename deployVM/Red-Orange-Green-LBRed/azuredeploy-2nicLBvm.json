@@ -14,6 +14,7 @@
       "defaultValue": "BackendVM",
       "metadata": {
         "description": "Prefix to use for VM names"
+	}
     },
     "adminUsername": {
       "type": "string",
