@@ -51,8 +51,7 @@
     "availabilitySetName": "AvSet",
 	"loadBalancerName": "ilb",
 	"numberOfInstances": 2,
-	"lbID": "[resourceId('Microsoft.Network/loadBalancers', variables('loadBalancerName'))]",
-    "networkInterfaceName": "nic",
+	"networkInterfaceName": "nic",
 	"virtualMachineName1": "VM-MultiNicRed",
 	"virtualMachineName2": "VM-Orange",
 	"virtualMachineName3": "VM-Green",
@@ -71,7 +70,8 @@
 	"subnet3Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnet3Name'))]",
 	"subnet4Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnet4Name'))]",
     "diagStorageAccountName": "[concat('diags',uniqueString(resourceGroup().id))]",
-    "networkSecurityGroupName": "NSG"
+    "networkSecurityGroupName": "NSG",
+	"lbID": "[resourceId('Microsoft.Network/loadBalancers', variables('loadBalancerName'))]"
   },
   "resources": [
    {
