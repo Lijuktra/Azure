@@ -11,7 +11,7 @@
     },
 	"vmNamePrefix": {
       "type": "string",
-      "defaultValue": "BackendVM",
+      "defaultValue": "VM-Red",
       "metadata": {
         "description": "Prefix to use for VM names"
 	}
