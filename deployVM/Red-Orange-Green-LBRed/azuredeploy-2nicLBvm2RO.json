@@ -11,7 +11,7 @@
     },
 	"vmNamePrefix": {
       "type": "string",
-      "defaultValue": "VM-Red",
+      "defaultValue": "RedVM",
       "metadata": {
         "description": "Prefix to use for VM names"
 	}
@@ -52,12 +52,14 @@
 	"loadBalancerName": "ilb",
 	"numberOfInstances": 2,
 	"networkInterfaceName": "nic",
-	"virtualMachineName1": "VM-MultiNicRed",
-	"virtualMachineName2": "VM-Orange",
+	"virtualMachineName1": "VM-FTPRed",
+	"virtualMachineName2a": "VM-Orange1",
+	"virtualMachineName2b": "VM-Orange2",
 	"virtualMachineName3": "VM-Green",
     "nic1": "nic-1",
     "nic2": "nic-2",
-	"nic3": "nic-3",
+	"nic3a": "nic-3a",
+	"nic3b": "nic-3b",
 	"nic4": "nic-4",
     "virtualNetworkName": "DCLOUDvirtualNetwork",
     "subnet1Name": "subnet-1",
@@ -147,17 +149,17 @@
       }
     },
 	{
-      "name": "[variables('virtualMachineName2')]",
+      "name": "[variables('virtualMachineName2a')]",
       "type": "Microsoft.Compute/virtualMachines",
       "apiVersion": "2017-03-30",
       "location": "[parameters('location')]",
       "comments": "This is the virtual machine that you're building..",
        "dependsOn": [
-        "[variables('nic3')]",
+        "[variables('nic3a')]",
       ],
       "properties": {
         "osProfile": {
-          "computerName": "[variables('virtualMachineName2')]",
+          "computerName": "[variables('virtualMachineName2a')]",
           "adminUsername": "[parameters('adminUsername')]",
           "adminPassword": "[parameters('adminPassword')]",
           "windowsConfiguration": {
@@ -182,7 +184,55 @@
         "networkProfile": {
           "networkInterfaces": [
             {
-             "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('nic3'))]"
+             "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('nic3a'))]"
+            },
+           ]
+        },
+        "diagnosticsProfile": {
+          "bootDiagnostics": {
+            "enabled": true,
+            "storageUri": "[reference(resourceId('Microsoft.Storage/storageAccounts', variables('diagStorageAccountName')), '2017-06-01').primaryEndpoints['blob']]"
+          }
+        }
+      }
+    },
+	{
+      "name": "[variables('virtualMachineName2b')]",
+      "type": "Microsoft.Compute/virtualMachines",
+      "apiVersion": "2017-03-30",
+      "location": "[parameters('location')]",
+      "comments": "This is the virtual machine that you're building..",
+       "dependsOn": [
+        "[variables('nic3b')]",
+      ],
+      "properties": {
+        "osProfile": {
+          "computerName": "[variables('virtualMachineName2b')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "adminPassword": "[parameters('adminPassword')]",
+          "windowsConfiguration": {
+            "provisionVmAgent": "true"
+          }
+        },
+        "hardwareProfile": {
+          "vmSize": "[parameters('virtualMachineSize')]"
+        },
+        "storageProfile": {
+          "imageReference": {
+            "publisher": "MicrosoftWindowsServer",
+            "offer": "WindowsServer",
+            "sku": "2016-Datacenter",
+            "version": "latest"
+          },
+          "osDisk": {
+            "createOption": "FromImage"
+          },
+          "dataDisks": []
+        },
+        "networkProfile": {
+          "networkInterfaces": [
+            {
+             "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('nic3b'))]"
             },
            ]
         },
@@ -349,7 +399,30 @@
       }
     },
 	{
-      "name": "[variables('nic3')]",
+      "name": "[variables('nic3a')]",
+      "type": "Microsoft.Network/networkInterfaces",
+      "apiVersion": "2017-06-01",
+      "location": "[parameters('location')]",
+      "comments": "This will be your new NIC for vm2",
+      "dependsOn": [
+        "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
+      ],
+      "properties": {
+        "ipConfigurations": [
+          {
+            "name": "ipconfig2",
+            "properties": {
+              "subnet": {
+                "id": "[variables('subnet3Ref')]"
+              },
+              "privateIPAllocationMethod": "Dynamic"
+            }
+          }
+        ]
+      }
+    },
+	{
+      "name": "[variables('nic3b')]",
       "type": "Microsoft.Network/networkInterfaces",
       "apiVersion": "2017-06-01",
       "location": "[parameters('location')]",
