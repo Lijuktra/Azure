@@ -24,7 +24,7 @@
       "value": "191.0.0.0/24"
     },
     "PrimaryNic": {
-      "value": "Nic2"
+      "value": "Nic1"
     }
   }
 }
