@@ -4,14 +4,14 @@
     "parameters": {
         "vNet1Name": {
             "type":"string",
-            "defaultValue": "DCloudVnet1",
+            "defaultValue": "DCloudVnet3",
             "metadata": {
                 "description": "Name for vNet 1"
             }
         },
         "vNet2Name": {
             "type": "string",
-            "defaultValue": "DCloudVnet2",
+            "defaultValue": "DCloudVnet4",
             "metadata": {
                 "description": "Name for vNet 2"
             }
@@ -19,14 +19,14 @@
     },
     "variables": {
         "vNet1": {
-            "addressSpacePrefix": "11.0.0.0/16",
+            "addressSpacePrefix": "130.0.0.0/16",
             "subnetName": "subnet-1",
-            "subnetPrefix": "11.0.0.0/24"
+            "subnetPrefix": "130.0.0.0/24"
         },
         "vNet2": {
-            "addressSpacePrefix": "191.0.0.0/16",
+            "addressSpacePrefix": "140.0.0.0/16",
             "subnetName": "subnet-1",
-            "subnetPrefix": "191.0.0.0/24"
+            "subnetPrefix": "140.0.0.0/24"
         },
         "vNet1tovNet2PeeringName": "[concat(parameters('vNet1Name'), '-', parameters('vNet2Name'))]",
         "vNet2tovNet1PeeringName": "[concat(parameters('vNet2Name'), '-', parameters('vNet1Name'))]"
