@@ -84,7 +84,7 @@
     "SecondaryNic": {
       "type": "string",
       "metadata": {
-        "description": "primaryNICname."
+        "description": "secondaryNICname."
       }
     },
     "storageAccountType": {
