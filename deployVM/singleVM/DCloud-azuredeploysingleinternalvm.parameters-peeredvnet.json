@@ -9,19 +9,19 @@
       "value": "Wowazureabcd12345#"
     },
     "VMhostName": {
-      "value": "swnclr0002"
+      "value": "swnclr0001"
     },
     "virtualNetworkName": {
-      "value": "DCloudVnet1"
+      "value": "DCloudVnet2"
     }, 
    "addressPrefix": {
-      "value": "11.0.0.0/16"
+      "value": "191.0.0.0/16"
     },
     "subnetName": {
       "value": "subnet-1"
     },
 	"subnetPrefix": {
-      "value": "11.0.0.0/24"
+      "value": "191.0.0.0/24"
     },
     "PrimaryNic": {
       "value": "Nic2"
