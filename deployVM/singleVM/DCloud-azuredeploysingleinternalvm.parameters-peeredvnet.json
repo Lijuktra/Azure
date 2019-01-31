@@ -15,13 +15,13 @@
       "value": "DCloudVnet1"
     }, 
    "addressPrefix": {
-      "value": "190.0.0.0/16"
+      "value": "191.0.0.0/16"
     },
     "subnetName": {
       "value": "subnet-1"
     },
 	"subnetPrefix": {
-      "value": "190.0.0.0/24"
+      "value": "191.0.0.0/24"
     },
     "PrimaryNic": {
       "value": "Nic2"
