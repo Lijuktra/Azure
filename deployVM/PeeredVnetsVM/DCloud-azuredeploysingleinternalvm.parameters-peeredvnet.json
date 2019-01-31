@@ -12,19 +12,19 @@
       "value": "swnclr0001"
     },
     "virtualNetworkName": {
-      "value": "DCloudVnet2"
+      "value": "DCloudVnet1"
     }, 
    "addressPrefix": {
-      "value": "191.0.0.0/16"
+      "value": "181.0.0.0/16"
     },
     "subnetName": {
-      "value": "subnet-1"
+      "value": "Peersubnet-1"
     },
 	"subnetPrefix": {
-      "value": "191.0.0.0/24"
+      "value": "181.0.0.0/24"
     },
     "PrimaryNic": {
-      "value": "Nic1"
+      "value": "PeerNic-1"
     }
   }
 }
