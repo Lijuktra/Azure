@@ -5,7 +5,7 @@
     "existingLocalVirtualNetworkName": {
       "type": "string",
       "metadata": {
-        "description": "Set the local VNet name"
+        "description": "Set the local1 VNet name"
       }
     },
     "existingRemoteVirtualNetworkName": {
