@@ -2,14 +2,14 @@
   "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "existingLocalVirtualNetworkName": {
-      "value": "test1"
+    "sourceVirtualNetworkName": {
+      "value": "DCloudVnet1"
     },
-    "existingRemoteVirtualNetworkName": {
-      "value": "Vnet2"
+    "destinationVirtualNetworkName": {
+      "value": "DCloudVnet2"
     },
-    "existingRemoteVirtualNetworkResourceGroupName": {
-      "value": "TestRG"
+    "destinationVirtualNetworkResourceGroupName": {
+      "value": "wowDCLOUDResourceGroup"
     }
   }
 }
