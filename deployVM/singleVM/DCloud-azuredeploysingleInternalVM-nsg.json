@@ -200,7 +200,7 @@
             "name": "rdp",
             "properties": {
               "priority": 101,
-              "sourceAddressPrefix": "*",
+              "sourceAddressPrefix": "10.11.1.8",
               "protocol": "Tcp",
               "destinationPortRange": "3389",
               "access": "allow",
