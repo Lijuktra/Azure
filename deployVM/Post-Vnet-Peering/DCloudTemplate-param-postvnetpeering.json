@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "existingLocalVirtualNetworkName": {
-      "value": "test1"
+      "value": "Vnet2"
     },
     "existingRemoteVirtualNetworkName": {
-      "value": "Vnet2"
+      "value": "test1"
     },
     "existingRemoteVirtualNetworkResourceGroupName": {
       "value": "TestRG"
