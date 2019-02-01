@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "wowazure"
+    },
+    "adminPassword": {
+      "value": "Wowazureabcd12345#"
+    },
+    "VMhostName": {
+      "value": "swnclr0002"
+    },
+    "virtualNetworkName": {
+      "value": "DCloudVnet2"
+    }, 
+   "addressPrefix": {
+      "value": "190.0.0.0/16"
+    },
+    "subnetName": {
+      "value": "subnet-2"
+    },
+	"subnetPrefix": {
+      "value": "190.0.0.0/24"
+    },
+    "PrimaryNic": {
+      "value": "Nic2"
+    }
+  }
+}

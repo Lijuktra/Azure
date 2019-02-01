@@ -197,26 +197,13 @@
       "properties": {
         "securityRules": [
           {
-            "name": "Norules",
+            "name": "rdp",
             "properties": {
               "priority": 102,
-              "sourceAddressPrefix": "*",
-              "protocol": "Tcp",
-              "destinationPortRange": "*",
-              "access": "deny",
-              "direction": "Inbound",
-              "sourcePortRange": "*",
-              "destinationAddressPrefix": "*"
-            }
-          },
-          {
-            "name": "RDPrule",
-            "properties": {
-              "priority": 103,
-              "sourceAddressPrefix": "*",
+              "sourceAddressPrefix": "10.11.1.8",
               "protocol": "Tcp",
               "destinationPortRange": "3389",
-              "access": "deny",
+              "access": "allow",
               "direction": "Inbound",
               "sourcePortRange": "*",
               "destinationAddressPrefix": "*"
