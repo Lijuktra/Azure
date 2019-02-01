@@ -3,13 +3,13 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "existingLocalVirtualNetworkName": {
-      "value": "DCloudSteppingStoneVnet"
+      "value": "test1"
     },
     "existingRemoteVirtualNetworkName": {
-      "value": "DCloudVnet1"
+      "value": "Vnet2"
     },
     "existingRemoteVirtualNetworkResourceGroupName": {
-      "value": "wowDCLOUDResourceGroup"
+      "value": "TestRG"
     }
   }
 }
