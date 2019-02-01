@@ -31,7 +31,7 @@
   "variables": {
     "remoteVNet": "[resourceId(parameters('destinationVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('destinationVirtualNetworkName'))]",
     "peeringName": "[concat(parameters('sourceVirtualNetworkName'), '/PeeredVnet1-Vnet2')]",
-    "remoteVNet2": "[resourceId(parameters('destinationVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('sourceVirtualNetworkName''))]",
+    "remoteVNet2": "[resourceId(parameters('destinationVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('sourceVirtualNetworkName'))]",
     "peeringName2": "[concat(parameters('destinationVirtualNetworkName'), '/PeeredVnet2-Vnet1')]"
   },
   "resources": [
