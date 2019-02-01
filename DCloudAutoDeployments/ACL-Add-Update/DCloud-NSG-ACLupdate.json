@@ -202,7 +202,7 @@
               "priority": 100,
               "sourceAddressPrefix": "*",
               "protocol": "Tcp",
-              "destinationPortRange": "3389",
+              "destinationPortRange": "3389-3398",
               "access": "Allow",
               "direction": "Inbound",
               "sourcePortRange": "*",

@@ -208,19 +208,6 @@
               "sourcePortRange": "*",
               "destinationAddressPrefix": "*"
             }
-          },
-          {
-            "name": "RDPrule",
-            "properties": {
-              "priority": 103,
-              "sourceAddressPrefix": "*",
-              "protocol": "Tcp",
-              "destinationPortRange": "3389",
-              "access": "deny",
-              "direction": "Inbound",
-              "sourcePortRange": "*",
-              "destinationAddressPrefix": "*"
-            }
           }
         ]
       }
