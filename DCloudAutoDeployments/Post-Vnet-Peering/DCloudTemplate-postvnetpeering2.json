@@ -17,7 +17,7 @@
     "destinationVirtualNetworkResourceGroupName": {
       "type": "string",
       "metadata": {
-        "description": "Sets the remote VNet Resource group"
+        "description": "Sets the remote VNetResource group"
       }
     },
     "location": {
