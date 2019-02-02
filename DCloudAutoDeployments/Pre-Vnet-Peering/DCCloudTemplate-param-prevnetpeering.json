@@ -4,10 +4,10 @@
     "parameters": {
         "vNet1Name":
         {
-            "value": "DCloudVnet3"
+            "value": "DCloudVnet-x"
         },
         "vNet2Name": {
-            "value": "DCloudVnet4"
+            "value": "DCloudVnet-y"
         }
     }
 }
