@@ -210,7 +210,7 @@
               "destinationPortRange": "3389",
               "access": "Allow",
               "direction": "Inbound",
-              "sourcePortRange": "*",
+              "sourcePortRange": "150.0.0.4",
               "destinationAddressPrefix": "*"
             }
           },

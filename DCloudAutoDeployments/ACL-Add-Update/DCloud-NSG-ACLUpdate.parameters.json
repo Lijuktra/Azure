@@ -10,7 +10,7 @@
     },
     "VMhostName": 
     {
-      "value": "swnclred1"
+      "value": "swnclred2"
     },
     "virtualNetworkName": {
       "value": "DCloudLowerRedVnet-1"
@@ -25,7 +25,7 @@
       "value": "160.0.0.0/24"
     },
     "PrimaryNic": {
-      "value": "DcloudLRedNic-1"
+      "value": "DcloudLRedNic-2"
     },
     "NSGName": {
       "value": "RedNSG-1"
