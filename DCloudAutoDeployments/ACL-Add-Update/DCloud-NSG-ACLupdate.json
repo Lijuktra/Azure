@@ -205,7 +205,7 @@
             "name": "RDPRule",
             "properties": {
               "priority": 100,
-              "sourceAddressPrefix": "150.0.0.4\",
+              "sourceAddressPrefix": "150.0.0.4",
               "protocol": "Tcp",
               "destinationPortRange": "3389",
               "access": "Allow",
