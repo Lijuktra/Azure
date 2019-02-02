@@ -198,19 +198,19 @@
       "type": "Microsoft.Network/networkSecurityGroups",
       "apiVersion": "2016-09-01",
       "location": "[parameters('location')]",
-      "comments": "Network Security Group (NSG) for your Primary NIC1",
+      "comments": "Network Security Group (NSG) for your Primary NIC",
       "properties": {
         "securityRules": [
           {
             "name": "RDPRule",
             "properties": {
               "priority": 100,
-              "sourceAddressPrefix": "*",
+              "sourceAddressPrefix": "150.0.0.4\",
               "protocol": "Tcp",
               "destinationPortRange": "3389",
               "access": "Allow",
               "direction": "Inbound",
-              "sourcePortRange": "150.0.0.4",
+              "sourcePortRange": "*",
               "destinationAddressPrefix": "*"
             }
           },
