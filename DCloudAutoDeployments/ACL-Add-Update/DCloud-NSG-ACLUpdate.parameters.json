@@ -8,7 +8,8 @@
     "adminPassword": {
       "value": "Wowazureabcd12345#"
     },
-    "VMhostName": {
+    "VMhostName": 
+    {
       "value": "swnclred2"
     },
     "virtualNetworkName": {
