@@ -3,10 +3,10 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "sourceVirtualNetworkName": {
-      "value": "DCloudVnet1"
+      "value": "DCloudSteppingstoneVnet-1"
     },
     "destinationVirtualNetworkName": {
-      "value": "DCloudVnet2"
+      "value": "DCloudLowerRedVnet-1"
     },
     "destinationVirtualNetworkResourceGroupName": {
       "value": "wowDCLOUDResourceGroup"
