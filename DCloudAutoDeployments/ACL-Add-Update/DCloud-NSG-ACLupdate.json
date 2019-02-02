@@ -198,7 +198,7 @@
       "type": "Microsoft.Network/networkSecurityGroups",
       "apiVersion": "2016-09-01",
       "location": "[parameters('location')]",
-      "comments": "Network Security Group (NSG) for your Primary NIC",
+      "comments": "Network Security Group (NSG) for your Primary NIC22",
       "properties": {
         "securityRules": [
           {
