@@ -122,7 +122,7 @@
       "location": "[parameters('location')]",
       "apiVersion": "2018-10-01",
       "dependsOn": [
-        "[parameters('NSGNmame')]",
+        "[parameters('NSGName')]",
         "[resourceId('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]"
       ],
       "properties": {
@@ -138,7 +138,7 @@
           }
         ],
         "networkSecurityGroup": {
-          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('NSGNmame'))]"
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('NSGName'))]"
         }
       }
     },
@@ -194,7 +194,7 @@
       }
     },
     {
-      "name": "[parameters('NSGNmame')]",
+      "name": "[parameters('NSGName')]",
       "type": "Microsoft.Network/networkSecurityGroups",
       "apiVersion": "2016-09-01",
       "location": "[parameters('location')]",
