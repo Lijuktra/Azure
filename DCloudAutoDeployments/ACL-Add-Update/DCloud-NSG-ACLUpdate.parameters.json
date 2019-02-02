@@ -26,7 +26,7 @@
     "PrimaryNic": {
       "value": "DcloudLRedNic-2"
     },
-    "NSGNmame": {
+    "NSGName": {
       "value": "RedNSG-2"
     }
   }

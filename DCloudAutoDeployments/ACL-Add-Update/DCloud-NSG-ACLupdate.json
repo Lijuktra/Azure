@@ -20,7 +20,7 @@
         "description": "address prefix."
       }
     },
-     "NSGNmame": {
+     "NSGName": {
       "type": "string",
       "metadata": {
         "description": "nsg name."
@@ -81,7 +81,6 @@
   },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
-    "networkSecurityGroupName": "NSG",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('subnetName'))]"
   },
   "resources": [
@@ -139,7 +138,7 @@
           }
         ],
         "networkSecurityGroup": {
-          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupName'))]"
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('NSGNmame'))]"
         }
       }
     },
