@@ -20,6 +20,12 @@
         "description": "address prefix."
       }
     },
+     "NSGNmame": {
+      "type": "string",
+      "metadata": {
+        "description": "nsg name."
+      }
+    },
     "subnetPrefix": {
       "type": "string",
       "metadata": {
@@ -117,7 +123,7 @@
       "location": "[parameters('location')]",
       "apiVersion": "2018-10-01",
       "dependsOn": [
-        "[variables('networkSecurityGroupName')]",
+        "[parameters('NSGNmame')]",
         "[resourceId('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]"
       ],
       "properties": {
@@ -189,7 +195,7 @@
       }
     },
     {
-      "name": "[variables('networkSecurityGroupName')]",
+      "name": "[parameters('NSGNmame')]",
       "type": "Microsoft.Network/networkSecurityGroups",
       "apiVersion": "2016-09-01",
       "location": "[parameters('location')]",
