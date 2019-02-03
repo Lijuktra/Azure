@@ -750,7 +750,7 @@
             "properties": {
               "priority": 100,
                "sourceAddressPrefixes": [
-      			"170.0.1.5,170.0.1.6"
+      			"170.0.1.5","170.0.1.6"
   			  ],
               "protocol": "Tcp",
               "destinationPortRange": "3389",
@@ -789,7 +789,7 @@
             "properties": {
               "priority": 100,
               "sourceAddressPrefixes": [
-      			"170.0.2.4,170.0.2.5"
+      			"170.0.2.4","170.0.2.5"
   			  ],
               "protocol": "Tcp",
               "destinationPortRange": "3389",
