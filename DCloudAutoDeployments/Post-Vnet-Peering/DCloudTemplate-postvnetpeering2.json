@@ -14,6 +14,12 @@
         "description": "Set the remote VNet name"
       }
     },
+    "SourceVirtualNetworkResourceGroupName": {
+      "type": "string",
+      "metadata": {
+        "description": "Sets the remote VNetResource group"
+      }
+    },
     "destinationVirtualNetworkResourceGroupName": {
       "type": "string",
       "metadata": {
@@ -43,7 +49,7 @@
   "variables": {
     "remoteVNet": "[resourceId(parameters('destinationVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('destinationVirtualNetworkName'))]",
     "peeringName": "[concat(parameters('sourceVirtualNetworkName'), parameters('onwardpeername'))]",
-    "remoteVNet2": "[resourceId(parameters('destinationVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('sourceVirtualNetworkName'))]",
+    "remoteVNet2": "[resourceId(parameters('SourceVirtualNetworkResourceGroupName'), 'Microsoft.Network/virtualNetworks', parameters('sourceVirtualNetworkName'))]",
     "peeringName2": "[concat(parameters('destinationVirtualNetworkName'), parameters('forwardpeername'))]"
   },
   "resources": [

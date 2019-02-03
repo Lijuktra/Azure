@@ -14,9 +14,6 @@
      "forwardpeername": {
       "value": "/PeeredEnterpriseLowerRed-Steppingstone"
     },
-    "SourceVirtualNetworkResourceGroupName": {
-      "value": "wowDCLOUDResourceGroup"
-    },
     "destinationVirtualNetworkResourceGroupName": {
       "value": "wowDCLOUDResourceGroup"
     }
