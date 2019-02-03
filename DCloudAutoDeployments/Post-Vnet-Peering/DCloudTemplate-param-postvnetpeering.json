@@ -8,6 +8,12 @@
     "destinationVirtualNetworkName": {
       "value": "DCloudLowerRedVnet-1"
     },
+     "onwardpeername": {
+      "value": "/PeeredVnetUpperRed-LowerRed"
+    },
+     "forwardpeername": {
+      "value": "/LowerRed-UpperRed"
+    },
     "destinationVirtualNetworkResourceGroupName": {
       "value": "wowDCLOUDResourceGroup"
     }
