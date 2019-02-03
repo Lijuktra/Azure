@@ -48,8 +48,8 @@
     }
   },
   "variables": {
-    "availabilitySetName": "AvSet",
-	"loadBalancerName": "ilb",
+    "availabilitySetName": "EnterpriceApp1AvSet",
+	"loadBalancerName": "EnterpriseApp1LB",
 	"numberOfInstances": 2,
 	"networkInterfaceName": "nic",
 	"virtualMachineName1": "VM-FTPRed",
@@ -61,7 +61,7 @@
 	"nic3a": "nic-3a",
 	"nic3b": "nic-3b",
 	"nic4": "nic-4",
-    "virtualNetworkName": "DCLOUDvirtualNetwork",
+    "virtualNetworkName": "DCLOUDEnterpriseVirtualNW",
     "subnet1Name": "subnet-1",
     "subnet2Name": "subnet-2",
 	"subnet3Name": "subnet-3",
@@ -312,32 +312,32 @@
       "properties": {
         "addressSpace": {
           "addressPrefixes": [
-            "10.0.0.0/16"
+            "170.0.0.0/16"
           ]
         },
         "subnets": [
           {
             "name": "[variables('subnet1Name')]",
             "properties": {
-              "addressPrefix": "10.0.0.0/24"
+              "addressPrefix": "170.0.0.0/24"
             }
           },
           {
             "name": "[variables('subnet2Name')]",
             "properties": {
-              "addressPrefix": "10.0.1.0/24"
+              "addressPrefix": "170.0.1.0/24"
             }
           },
 		  {
             "name": "[variables('subnet3Name')]",
             "properties": {
-              "addressPrefix": "10.0.2.0/24"
+              "addressPrefix": "170.0.2.0/24"
             }
           },
 		  {
             "name": "[variables('subnet4Name')]",
             "properties": {
-              "addressPrefix": "10.0.3.0/24"
+              "addressPrefix": "170.0.3.0/24"
             }
           }
 
@@ -514,7 +514,7 @@
               "subnet": {
                 "id": "[variables('subnet2Ref')]"
               },
-              "privateIPAddress": "10.0.1.8",
+              "privateIPAddress": "170.0.1.8",
               "privateIPAllocationMethod": "Static"
             },
             "name": "LoadBalancerFrontend"
