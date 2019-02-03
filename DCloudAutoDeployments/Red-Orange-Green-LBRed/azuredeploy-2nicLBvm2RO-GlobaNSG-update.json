@@ -749,7 +749,9 @@
             "name": "RDPRule",
             "properties": {
               "priority": 100,
-              "sourceAddressPrefix": "'170.0.1.5,170.0.1.6'",
+               "sourceAddressPrefixes": [
+      			"170.0.1.5,170.0.1.6"
+  			  ],
               "protocol": "Tcp",
               "destinationPortRange": "3389",
               "access": "Allow",
@@ -786,7 +788,9 @@
             "name": "RDPRule",
             "properties": {
               "priority": 100,
-              "sourceAddressPrefix": "'170.0.2.4,170.0.2.5''",
+              "sourceAddressPrefixes": [
+      			"170.0.2.4,170.0.2.5"
+  			  ],
               "protocol": "Tcp",
               "destinationPortRange": "3389",
               "access": "Allow",
