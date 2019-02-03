@@ -6,7 +6,7 @@
       "value": "DCloudSteppingstoneVnet-1"
     },
     "destinationVirtualNetworkName": {
-      "value": "DCloudLowerRedVnet-1"
+      "value": "DCLOUDEnterpriseVirtualNW"
     },
      "onwardpeername": {
       "value": "/PeeredSteppingstone-EnterpriseLowerRed"
@@ -15,7 +15,7 @@
       "value": "/PeeredEnterpriseLowerRed-Steppingstone"
     },
     "destinationVirtualNetworkResourceGroupName": {
-      "value": "wowDCLOUDResourceGroup"
+      "value": "TestResourceGroup"
     }
   }
 }
