@@ -6,7 +6,7 @@
       "value": "DCloudSteppingstoneVnet-1"
     },
     "destinationVirtualNetworkName": {
-      "value": "DCloudTest2"
+      "value": "DCloudLowerRedVnet-1"
     },
      "onwardpeername": {
       "value": "/PeeredSteppingstone-EnterpriseLowerRed"
