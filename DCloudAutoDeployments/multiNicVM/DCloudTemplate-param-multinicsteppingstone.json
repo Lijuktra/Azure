@@ -9,37 +9,37 @@
       "value": "Wowazureabcd12345#"
     },
     "VMhostName": {
-      "value": "swnclrStep2"
+      "value": "swnclrtest2"
     },
      "dnsLabelPrefix": {
-      "value": "dcloudsteppingstonedns2"
+      "value": "dcloudtestdns2"
     },
     "publicIP": {
       "value": "ssdcpublicip2"
     },
     "virtualNetworkName": {
-      "value": "DCloudSteppingStoneVnet2"
+      "value": "DCloudTest2"
     }, 
    "addressPrefix": {
-      "value": "110.0.0.0/16"
+      "value": "260.0.0.0/16"
     },
     "subnetName1": {
-      "value": "steppingstonesubnet1-2"
+      "value": "testsubnet1-2"
     },
     "subnetName2": {
-      "value": "steppingstonesubnet2-2"
+      "value": "testsubnet2-2"
     },
 	"subnet1Prefix": {
-      "value": "110.0.0.0/24"
+      "value": "260.0.0.0/24"
     },
     "subnet2Prefix": {
-      "value": "110.0.1.0/24"
+      "value": "260.0.1.0/24"
     },
      "PrimaryNic": {
-      "value": "SS-FrontNic1-2"
+      "value": "test-FrontNic1-2"
     },
     "SecondaryNic": {
-      "value": "SS-MgmntNic2-2"
+      "value": "test-MgmntNic2-2"
     }
     
   }
