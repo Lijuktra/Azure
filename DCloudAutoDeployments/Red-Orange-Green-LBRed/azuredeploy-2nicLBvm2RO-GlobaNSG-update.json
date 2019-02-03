@@ -642,7 +642,7 @@
     {
       "name": "[variables('networkSecurityGroupName')]",
       "type": "Microsoft.Network/networkSecurityGroups",
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2018-04-01",
       "location": "[parameters('location')]",
       "comments": "Network Security Group (NSG) for your Primary NIC",
       "properties": {
@@ -666,7 +666,7 @@
      {
       "name": "[variables('networkSecurityGroupNameUpperRed')]",
       "type": "Microsoft.Network/networkSecurityGroups",
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2018-04-01",
       "location": "[parameters('location')]",
       "comments": "Network Security Group (NSG) for your Primary NIC",
       "properties": {
@@ -703,7 +703,7 @@
     {
       "name": "[variables('networkSecurityGroupNameRed')]",
       "type": "Microsoft.Network/networkSecurityGroups",
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2018-04-01",
       "location": "[parameters('location')]",
       "comments": "Network Security Group (NSG) for your Primary NIC",
       "properties": {
@@ -740,7 +740,7 @@
     {
       "name": "[variables('networkSecurityGroupNameOrange')]",
       "type": "Microsoft.Network/networkSecurityGroups",
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2018-04-01",
       "location": "[parameters('location')]",
       "comments": "Network Security Group (NSG) for your Primary NIC",
       "properties": {
@@ -779,7 +779,7 @@
     {
       "name": "[variables('networkSecurityGroupNameGreen')]",
       "type": "Microsoft.Network/networkSecurityGroups",
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2018-04-01",
       "location": "[parameters('location')]",
       "comments": "Network Security Group (NSG) for your Primary NIC",
       "properties": {
