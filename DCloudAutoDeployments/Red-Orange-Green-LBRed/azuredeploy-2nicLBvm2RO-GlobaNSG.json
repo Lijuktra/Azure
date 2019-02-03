@@ -73,6 +73,7 @@
 	"subnet4Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnet4Name'))]",
     "diagStorageAccountName": "[concat('diags',uniqueString(resourceGroup().id))]",
     "networkSecurityGroupName": "NSG",
+    "networkSecurityGroupNameUpperRed": "NSGUpperRed",
     "networkSecurityGroupNameRed": "NSGRed",
     "networkSecurityGroupNameOrange": "NSGOrange",
     "networkSecurityGroupNameGreen": "NSGGreen",
@@ -401,7 +402,7 @@
           }
         ],
          "networkSecurityGroup": {
-          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupNameRed'))]"
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupNameUpperRed'))]"
         }
       }
     },
@@ -512,7 +513,10 @@
               ]
             }
           }
-        ]
+        ],
+        "networkSecurityGroup": {
+          "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('networkSecurityGroupNameRed'))]"
+        }
       }
     }, 
 	{
@@ -651,6 +655,30 @@
               "protocol": "Tcp",
               "destinationPortRange": "3389",
               "access": "Allow",
+              "direction": "Inbound",
+              "sourcePortRange": "*",
+              "destinationAddressPrefix": "*"
+            }
+          }
+        ]
+      }
+    },
+     {
+      "name": "[variables('networkSecurityGroupNameUpperRed')]",
+      "type": "Microsoft.Network/networkSecurityGroups",
+      "apiVersion": "2016-09-01",
+      "location": "[parameters('location')]",
+      "comments": "Network Security Group (NSG) for your Primary NIC",
+      "properties": {
+        "securityRules": [
+          {
+            "name": "Port-rule",
+            "properties": {
+              "priority": 200,
+              "sourceAddressPrefix": "*",
+              "protocol": "Tcp",
+              "destinationPortRange": "*",
+              "access": "Deny",
               "direction": "Inbound",
               "sourcePortRange": "*",
               "destinationAddressPrefix": "*"
