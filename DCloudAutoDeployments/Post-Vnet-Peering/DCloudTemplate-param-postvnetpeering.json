@@ -15,10 +15,10 @@
       "value": "/PeeredEnterPriseRed-Steppingstone"
     },
     "SourceVirtualNetworkResourceGroupName": {
-      "value": "DCLOUDOSSResourceGroup"
+      "value": "DCLOUD-OSS-ResourceGroup"
     },
     "destinationVirtualNetworkResourceGroupName": {
-      "value": "DCLOUDENTResourceGroup"
+      "value": "DCLOUD-ENT-ResourceGroup"
     }
   }
 }
