@@ -39,6 +39,12 @@
         "Premium_LRS"
       ]
     },
+    "SourceRed": {
+      "type": "array",
+      "metadata": {
+        "description": "Prefix to use for VM names"
+	}
+    },
     "location": {
       "type": "string",
       "defaultValue": "[resourceGroup().location]",
@@ -749,9 +755,7 @@
             "name": "RDPRule",
             "properties": {
               "priority": 100,
-               "sourceAddressPrefixes": [
-      			"170.0.1.5","170.0.1.6"
-  			  ],
+               "sourceAddressPrefixes": "[parameters('SourceRed')]",
               "protocol": "Tcp",
               "destinationPortRange": "3389",
               "access": "Allow",
