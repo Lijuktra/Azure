@@ -21,7 +21,7 @@
       "value": "DCloudTest2"
     }, 
    "addressPrefix": {
-      "value": "260.0.0.0/16"
+      "value": "20.0.0.0/16"
     },
     "subnetName1": {
       "value": "testsubnet1-2"
@@ -30,10 +30,10 @@
       "value": "testsubnet2-2"
     },
 	"subnet1Prefix": {
-      "value": "260.0.0.0/24"
+      "value": "20.0.0.0/24"
     },
     "subnet2Prefix": {
-      "value": "260.0.1.0/24"
+      "value": "20.0.1.0/24"
     },
      "PrimaryNic": {
       "value": "test-FrontNic1-2"
