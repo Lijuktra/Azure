@@ -9,7 +9,13 @@
             "value": "Wowazureabcd12345#"
         },
         "SourceRed": {
-            "value": ["10.0.1.0","10.0.1.1"]
+            "value": ["150.0.0.4"]
+        },
+        "SourceOrange": {
+            "value": ["170.0.1.5","170.0.1.6"]
+        },
+        "SourceGreen": {
+            "value": ["170.0.2.4","170.0.2.5"]
         }
     }
 }

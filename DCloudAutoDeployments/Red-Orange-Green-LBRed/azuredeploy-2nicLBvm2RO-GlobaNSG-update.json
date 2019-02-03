@@ -39,7 +39,19 @@
         "Premium_LRS"
       ]
     },
-    "SourceRed": {
+     "SourceRed": {
+      "type": "array",
+      "metadata": {
+        "description": "Prefix to use for VM names"
+	}
+    },
+    "SourceOrange": {
+      "type": "array",
+      "metadata": {
+        "description": "Prefix to use for VM names"
+	}
+    },
+     "SourceGreen": {
       "type": "array",
       "metadata": {
         "description": "Prefix to use for VM names"
@@ -681,7 +693,7 @@
             "name": "RDPRule",
             "properties": {
               "priority": 100,
-              "sourceAddressPrefix": "150.0.0.4",
+              "sourceAddressPrefixes": "[parameters('SourceRed')]",
               "protocol": "Tcp",
               "destinationPortRange": "3389",
               "access": "Allow",
@@ -718,7 +730,7 @@
             "name": "RDPRule",
             "properties": {
               "priority": 100,
-              "sourceAddressPrefix": "150.0.0.4",
+              "sourceAddressPrefixes": "[parameters('SourceRed')]",
               "protocol": "Tcp",
               "destinationPortRange": "3389",
               "access": "Allow",
@@ -755,7 +767,7 @@
             "name": "RDPRule",
             "properties": {
               "priority": 100,
-               "sourceAddressPrefixes": "[parameters('SourceRed')]",
+               "sourceAddressPrefixes": "[parameters('SourceOrange')]",
               "protocol": "Tcp",
               "destinationPortRange": "3389",
               "access": "Allow",
@@ -792,9 +804,7 @@
             "name": "RDPRule",
             "properties": {
               "priority": 100,
-              "sourceAddressPrefixes": [
-      			"170.0.2.4","170.0.2.5"
-  			  ],
+              "sourceAddressPrefixes": "[parameters('SourceGreen')]",
               "protocol": "Tcp",
               "destinationPortRange": "3389",
               "access": "Allow",
