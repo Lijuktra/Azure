@@ -356,7 +356,7 @@
       "dependsOn": [
         "[variables('publicIpAddressName')]",
         "[variables('networkSecurityGroupName')]",
-        "[variables('networkSecurityGroupGlobalName')]",
+        "[variables('networkSecurityGroupName')]",
         "[variables('virtualNetworkName')]"
       ],
       "properties": {
