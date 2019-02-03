@@ -9,10 +9,10 @@
       "value": "DCloudLowerRedVnet-1"
     },
      "onwardpeername": {
-      "value": "/PeeredUpperRed-LowerRed"
+      "value": "/PeeredSteppingstone-EnterpriseLowerRed"
     },
      "forwardpeername": {
-      "value": "/PeeredLowerRed-UpperRed"
+      "value": "/PeeredEnterpriseLowerRed-Steppingstone"
     },
     "destinationVirtualNetworkResourceGroupName": {
       "value": "wowDCLOUDResourceGroup"
