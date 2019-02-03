@@ -15,7 +15,7 @@
       "value": "/PeeredEnterpriseLowerRed-Steppingstone"
     },
     "destinationVirtualNetworkResourceGroupName": {
-      "value": "TestResourceGroup"
+      "value": "wowDCLOUDResourceGroup"
     }
   }
 }
