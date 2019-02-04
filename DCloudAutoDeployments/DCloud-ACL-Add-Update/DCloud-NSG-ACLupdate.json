@@ -55,7 +55,7 @@
     "virtualNetworkName" : "DCloudLowerRedVnet-1",
     "subnetName" : "DcloudLRedSubnet-1",
      "PrimaryNic" : "DcloudLRedNic-1",
-      "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), parameters('subnetName'))]"
+      "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
   },
   "resources": [
     {
@@ -82,7 +82,7 @@
         },
         "subnets": [
           {
-            "name": "[parameters('subnetName')]",
+            "name": "[variables('subnetName')]",
             "properties": {
               "addressPrefix": "160.0.0.0/24"
             }
