@@ -92,7 +92,7 @@
     },
     {
       "type": "Microsoft.Network/networkInterfaces",
-      "name": "[parameters('PrimaryNic')]",
+      "name": "[variables('PrimaryNic')]",
       "location": "[parameters('location')]",
       "apiVersion": "2018-10-01",
       "dependsOn": [
@@ -123,7 +123,7 @@
       "apiVersion": "2018-10-01",
       "dependsOn": [
         "[resourceId('Microsoft.Storage/storageAccounts/', variables('storageAccountName'))]",
-        "[resourceId('Microsoft.Network/networkInterfaces/', parameters('PrimaryNic'))]"
+        "[resourceId('Microsoft.Network/networkInterfaces/', variables('PrimaryNic'))]"
       ],
       "properties": {
         "hardwareProfile": {
@@ -155,7 +155,7 @@
         "networkProfile": {
           "networkInterfaces": [
             {
-              "id": "[resourceId('Microsoft.Network/networkInterfaces',parameters('PrimaryNic'))]"
+              "id": "[resourceId('Microsoft.Network/networkInterfaces',variables('PrimaryNic'))]"
             }
           ]
         },
