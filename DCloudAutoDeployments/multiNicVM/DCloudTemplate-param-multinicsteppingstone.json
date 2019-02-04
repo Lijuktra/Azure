@@ -9,16 +9,16 @@
       "value": "Wowazureabcd12345#"
     },
     "VMhostName": {
-      "value": "swnclrtest2"
+      "value": "swnclrtest3"
     },
      "dnsLabelPrefix": {
-      "value": "dcloudtestdnsabc"
+      "value": "dcloudtestdnsabc3"
     },
     "publicIP": {
-      "value": "ssdcpublicipabc"
+      "value": "ssdcpublicipabc1"
     },
     "virtualNetworkName": {
-      "value": "DCloudTest2"
+      "value": "DCloudTest3"
     }, 
    "addressPrefix": {
       "value": "20.0.0.0/16"
@@ -27,10 +27,10 @@
       "value": "30.0.0.0/16"
     },
     "subnetName1": {
-      "value": "testsubnet1-2"
+      "value": "testsubnet1-3"
     },
     "subnetName2": {
-      "value": "testsubnet2-2"
+      "value": "testsubnet2-3"
     },
 	"subnet1Prefix": {
       "value": "20.0.0.0/24"
@@ -39,10 +39,10 @@
       "value": "20.0.1.0/24"
     },
      "PrimaryNic": {
-      "value": "test-FrontNic1-2"
+      "value": "test-FrontNic1-3"
     },
     "SecondaryNic": {
-      "value": "test-MgmntNic2-2"
+      "value": "test-MgmntNic2-3"
     }
     
   }
