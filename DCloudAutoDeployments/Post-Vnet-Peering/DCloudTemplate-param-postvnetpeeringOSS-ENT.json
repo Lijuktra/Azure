@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "sourceVirtualNetworkName": {
+      "value": "DCloudSteppingstoneVnet-1"
+    },
+    "destinationVirtualNetworkName": {
+      "value": "DCLOUDEnterpriseVirtualNW"
+    },
+     "onwardpeername": {
+      "value": "/PeeredSteppingstone-Enterprise"
+    },
+     "forwardpeername": {
+      "value": "/PeeredEnterprise-Steppingstone"
+    },
+    "SourceVirtualNetworkResourceGroupName": {
+      "value": "DCLOUD-OSS-ResourceGroup"
+    },
+    "destinationVirtualNetworkResourceGroupName": {
+      "value": "DCLOUD-ENT-ResourceGroup"
+    }
+  }
+}
