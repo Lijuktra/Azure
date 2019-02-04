@@ -12,16 +12,19 @@
       "value": "swnclrtest2"
     },
      "dnsLabelPrefix": {
-      "value": "dcloudtestdns2"
+      "value": "dcloudtestdnsabc"
     },
     "publicIP": {
-      "value": "ssdcpublicip2"
+      "value": "ssdcpublicipabc"
     },
     "virtualNetworkName": {
       "value": "DCloudTest2"
     }, 
    "addressPrefix": {
       "value": "20.0.0.0/16"
+    },
+     "addressPrefix2": {
+      "value": "30.0.0.0/16"
     },
     "subnetName1": {
       "value": "testsubnet1-2"

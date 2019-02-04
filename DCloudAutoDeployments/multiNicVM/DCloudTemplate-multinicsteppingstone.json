@@ -51,6 +51,12 @@
         "description": "address prefix."
       }
     },
+    "addressPrefix2": {
+      "type": "string",
+      "metadata": {
+        "description": "address prefix."
+      }
+    },
     "subnetName1": {
       "type": "string",
       "metadata": {
@@ -191,7 +197,7 @@
       "comments": "This will build a Virtual Network.",
       "properties": {
         "addressSpace": {
-          "addressPrefixes": ["[parameters('addressPrefix')]"]
+          "addressPrefixes": ["[parameters('addressPrefix')]","[parameters('addressPrefix2')]"]
         },
         "subnets": [
           {
