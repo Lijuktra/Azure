@@ -170,7 +170,7 @@
     {
       "name": "[parameters('NSGName')]",
       "type": "Microsoft.Network/networkSecurityGroups",
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2018-04-01",
       "location": "[parameters('location')]",
       "comments": "Network Security Group (NSG) for your Primary NIC22",
       "properties": {
