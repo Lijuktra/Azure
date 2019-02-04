@@ -8,7 +8,8 @@
         "adminPassword": {
             "value": "Wowazureabcd12345#"
         },
-       "SourceRed": {
+       "SourceRed": 
+       {
             "value": ["150.0.0.4","170.0.1.8","10.0.0.4"]
         },
         "SourceOrange": 
