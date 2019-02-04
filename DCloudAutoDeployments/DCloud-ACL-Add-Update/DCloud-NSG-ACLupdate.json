@@ -14,46 +14,16 @@
         "description": "Password for the Virtual Machine.."
       }
     },
-    "addressPrefix": {
-      "type": "string",
-      "metadata": {
-        "description": "address prefix."
-      }
-    },
      "NSGName": {
       "type": "string",
       "metadata": {
         "description": "nsg name."
       }
     },
-    "subnetPrefix": {
-      "type": "string",
+   "SourceRed": {
+      "type": "array",
       "metadata": {
-        "description": "subnet prefix."
-      }
-    },
-     "subnetName": {
-      "type": "string",
-      "metadata": {
-        "description": "subnet name."
-      }
-    },
-    "VMhostName": {
-      "type": "string",
-      "metadata": {
-        "description": "HostName."
-      }
-    },
-    "virtualNetworkName": {
-      "type": "string",
-      "metadata": {
-        "description": "virtualnetworkName."
-      }
-    },
-    "PrimaryNic": {
-      "type": "string",
-      "metadata": {
-        "description": "primaryNICname."
+        "description": "arrayname."
       }
     },
     "windowsOSVersion": {
@@ -81,7 +51,11 @@
   },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
-    "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('subnetName'))]"
+    "VMhostName" : "swnclred1",
+    "virtualNetworkName" : "DCloudLowerRedVnet-1",
+    "subnetName" : "DcloudLRedSubnet-1",
+     "PrimaryNic" : "DcloudLRedNic-1",
+      "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), parameters('subnetName'))]"
   },
   "resources": [
     {
@@ -97,20 +71,20 @@
     },
     {
       "type": "Microsoft.Network/virtualNetworks",
-      "name": "[parameters('virtualNetworkName')]",
+      "name": "[variables('virtualNetworkName')]",
       "location": "[parameters('location')]",
       "apiVersion": "2018-10-01",
       "properties": {
         "addressSpace": {
           "addressPrefixes": [
-            "[parameters('addressPrefix')]"
+            "160.0.0.0/16"
           ]
         },
         "subnets": [
           {
             "name": "[parameters('subnetName')]",
             "properties": {
-              "addressPrefix": "[parameters('subnetPrefix')]"
+              "addressPrefix": "160.0.0.0/24"
             }
           }
         ]
@@ -123,7 +97,7 @@
       "apiVersion": "2018-10-01",
       "dependsOn": [
         "[parameters('NSGName')]",
-        "[resourceId('Microsoft.Network/virtualNetworks/', parameters('virtualNetworkName'))]"
+        "[resourceId('Microsoft.Network/virtualNetworks/', variables('virtualNetworkName'))]"
       ],
       "properties": {
         "ipConfigurations": [
@@ -144,7 +118,7 @@
     },
     {
       "type": "Microsoft.Compute/virtualMachines",
-      "name": "[parameters('VMhostName')]",
+      "name": "[variables('VMhostName')]",
       "location": "[parameters('location')]",
       "apiVersion": "2018-10-01",
       "dependsOn": [
@@ -156,7 +130,7 @@
           "vmSize": "Standard_A2"
         },
         "osProfile": {
-          "computerName": "[parameters('VMhostName')]",
+          "computerName": "[variables('VMhostName')]",
           "adminUsername": "[parameters('adminUsername')]",
           "adminPassword": "[parameters('adminPassword')]"
         },
@@ -205,7 +179,7 @@
             "name": "RDPRule",
             "properties": {
               "priority": 100,
-              "sourceAddressPrefix": "150.0.0.4",
+              "sourceAddressPrefixes": "[parameters('SourceRed')]",
               "protocol": "Tcp",
               "destinationPortRange": "3389",
               "access": "Allow",
