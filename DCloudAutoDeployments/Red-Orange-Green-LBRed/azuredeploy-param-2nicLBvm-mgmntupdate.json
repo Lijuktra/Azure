@@ -11,7 +11,8 @@
        "SourceRed": {
             "value": ["150.0.0.4","170.0.1.8","10.0.0.4"]
         },
-        "SourceOrange": {
+        "SourceOrange": 
+        {
             "value": ["170.0.1.5","170.0.1.6","10.0.0.4"]
         },
         "SourceGreen": 
