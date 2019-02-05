@@ -25,6 +25,6 @@
     },
     "PrimaryNic": {
       "value": "DcloudLMGMTNic-1"
-    }
+    } 
   }
 }
