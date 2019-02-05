@@ -12,7 +12,7 @@
       "value": "swncStepping1"
     },
     "dnsLabelPrefix": {
-      "value": "dcloudsteppingstone1"
+      "value": "dcloudexternsteppingstone"
     },
     "publicIP": {
       "value": "dclkpnpubliip3"
