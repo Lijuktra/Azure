@@ -75,7 +75,7 @@
   },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
-    "networkSecurityGroupName": "NSG",
+    "networkSecurityGroupName": "RedNSG-1",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('virtualNetworkName'), parameters('subnetName'))]"
   },
   "resources": [
