@@ -15,7 +15,7 @@
       "value": "dcloudsteppingstone1"
     },
     "publicIP": {
-      "value": "dclpublicip3"
+      "value": "dclkpnpubliip3"
     },
     "virtualNetworkName": {
       "value": "DCloudSteppingstoneVnet-1"
