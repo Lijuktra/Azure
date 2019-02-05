@@ -66,7 +66,7 @@
     "subnet2Name": "subnet-2",
 	"subnet3Name": "subnet-3",
 	"subnet4Name": "subnet-4",
-	"publicIPAddressName": "publicIp",
+	"publicIPAddressName": "dcloudpublicIp2",
     "subnet1Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnet1Name'))]",
     "subnet2Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnet2Name'))]",
 	"subnet3Ref": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnet3Name'))]",
