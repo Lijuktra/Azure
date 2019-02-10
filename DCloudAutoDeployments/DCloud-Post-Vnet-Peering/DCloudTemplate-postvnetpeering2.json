@@ -5,7 +5,7 @@
     "sourceVirtualNetworkName": {
       "type": "string",
       "metadata": {
-        "description": "Set1 the local1 VNet name"
+        "description": "Set1 the local~ VNet name"
       }
     },
     "destinationVirtualNetworkName": {
