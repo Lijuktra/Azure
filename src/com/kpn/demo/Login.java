@@ -9,11 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.microsoft.applicationinsights.TelemetryConfiguration;
+import com.microsoft.applicationinsights.web.internal.WebRequestTrackingFilter;
+
 public class Login extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		
+		
 		
 		
 		String username= request.getParameter("j_username");
@@ -24,7 +29,7 @@ public class Login extends HttpServlet {
 		out.println("This is the Test Servlet for mendix +"+ username+ "password" + password );
 
 		
-		if(username.equals("liju"))
+		if(username.equals("liju2"))
 			{
 			out.print("<br/>Header Name: <em>" + "success");
 			}
@@ -36,5 +41,18 @@ public class Login extends HttpServlet {
 			
 		
 	}
+	
+	    public class AppInsightsConfig {
+
+	    //Initialize AI TelemetryConfiguration via Spring Beans
+	      
+	        public String telemetryConfig() {
+	            String telemetryKey = System.getenv("APPLICATION_INSIGHTS_IKEY");
+	            if (telemetryKey != null) {
+	                TelemetryConfiguration.getActive().setInstrumentationKey(telemetryKey);
+	            }
+	            return telemetryKey;
+	        }
+	 }
 	
 }

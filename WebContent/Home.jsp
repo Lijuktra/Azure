@@ -11,7 +11,7 @@
 		<form action="HelloServlet">
 <table>
 	<tr>
-		<td colspan="2">Login to the Tomcat-Demo application for KPn team</td>
+		<td colspan="2">Login to the Tomcat-Demo application for staging team 6</td>
 	</tr>
 	<tr>
 		<td>Name:</td>
