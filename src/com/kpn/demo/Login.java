@@ -26,7 +26,7 @@ public class Login extends HttpServlet {
 		
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		out.println("This is the Test Servlet for Azure +"+ username+ "password" + password );
+		out.println("This is the Test Servleta for Azure +"+ username+ "password" + password );
 
 		
 		if(username.equals("liju2"))
